@@ -20,10 +20,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val users = DataSource(this).loadUsers()
+        val players = DataSource(this).loadUsers()
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.adapter = ItemAdapter(users)
+        recyclerView.adapter = ItemAdapter(players)
         recyclerView.setHasFixedSize(true)
 
     }

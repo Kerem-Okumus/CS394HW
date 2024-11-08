@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="lakers1">#552583 </color>
+    <color name="lakers2">#FDB927 </color>
+
+    <color name="gsw1">#1D428A  </color>
+    <color name="gsw2">#FFC72C  </color>
+
+    <color name="phnx1">#1D1160  </color>
+    <color name="phnx2">#E56020  </color>
+
+    <color name="denver1">#0E2240  </color>
+    <color name="denver2">#1D428A  </color>
+
+    <color name="houston1">#CE1141  </color>
+    <color name="houston2">#C4CED4  </color>
+
+    <color name="boston1">#007A33  </color>
+    <color name="boston2">#FFFFFF  </color>
+
+    <color name="mine1">#0C2340  </color>
+    <color name="mine2">#9EA2A2  </color>
+
+    <color name="dallas1">#003594   </color>
+    <color name="dallas2">#FFFFFF   </color>
 </resources>

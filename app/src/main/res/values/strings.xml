@@ -29,16 +29,16 @@
 
     </string-array>
     <string-array name="info_array">
-        <item>Age : 39</item>
-        <item>Age : 35</item>
-        <item>Age : 36</item>
-        <item>Age : 30</item>
-        <item>Age : 24</item>
-        <item>Age : 33</item>
-        <item>Age : 27</item>
-        <item>Age : 26</item>
-        <item>Age : 36</item>
-        <item>Age : 23</item>
+        <item>Age : 39, salary: 49m</item>
+        <item>Age : 35, salary: 55m</item>
+        <item>Age : 36, salary: 50m</item>
+        <item>Age : 32, salary: 51.5m</item>
+        <item>Age : 24, salary: 35m</item>
+        <item>Age : 31, salary: 45m</item>
+        <item>Age : 25, salary: 43m</item>
+        <item>Age : 24, salary: 43m</item>
+        <item>Age : 35, salary: 34m</item>
+        <item>Age : 23, salary: 30m</item>
     </string-array>
 
 </resources>

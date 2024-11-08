@@ -1,6 +1,7 @@
 package com.example.cs394hw.adapter
 
 
+import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +12,7 @@ import com.example.cs394hw.R
 import com.example.cs394hw.UserDetailActivity
 import com.example.cs394hw.model.Player
 
-class ItemAdapter(private val data: List<Player>): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+class ItemAdapter( private val data: List<Player>): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
     class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view){
 
         private lateinit var player: Player
@@ -23,8 +24,8 @@ class ItemAdapter(private val data: List<Player>): RecyclerView.Adapter<ItemAdap
                 val context = itemView.context
                 val showUserIntent = Intent(context, UserDetailActivity::class.java)
                 showUserIntent.putExtra(UserDetailActivity.PlayerName, player.name)
-                showUserIntent.putExtra(UserDetailActivity.PlayerTeam, player.playerTeam)
-                showUserIntent.putExtra(UserDetailActivity.PlayerInfo, player.playerInfo)
+                showUserIntent.putExtra(UserDetailActivity.PlayerTeam, player.playerInfo)
+                showUserIntent.putExtra(UserDetailActivity.PlayerInfo, player.playerTeam)
                 context.startActivity(showUserIntent)
             }
         }
@@ -34,6 +35,9 @@ class ItemAdapter(private val data: List<Player>): RecyclerView.Adapter<ItemAdap
             profileView.text = player.playerInfo
         }
     }
+
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
@@ -45,8 +49,9 @@ class ItemAdapter(private val data: List<Player>): RecyclerView.Adapter<ItemAdap
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val user = data[position]
-        holder.bind(user)
+        val player = data[position]
+        holder.bind(player)
+
 
     }
 }
