@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">MyRVExample</string>
+    <string-array name="name_array">
+        <item>Lebron James</item>
+        <item>Stephen Curry</item>
+        <item>Kevin Durant</item>
+        <item>Nicola Jokic</item>
+        <item>Alperen Şengün</item>
+        <item>Anthony Davis</item>
+        <item>Jason Tatum</item>
+        <item>Luka Doncic</item>
+        <item>Kyrie Irving</item>
+        <item>Anthony Edwards</item>
+    </string-array>
+    <string-array name="profiledesc_array">
+        <item>Los Angeles Lakers</item>
+        <item>Golden State Warriors</item>
+        <item>Phoenix Suns</item>
+        <item>Denver Nuggets</item>
+        <item>Houston Rockets</item>
+        <item>Los Angeles Lakers</item>
+        <item>Boston Celtics</item>
+        <item>Dallas Mavericks</item>
+        <item>Dallas Mavericks</item>
+        <item>Minnesota Timberwolves</item>
+
+
+
+
+    </string-array>
+    <string-array name="address_array">
+        <item>Age : 39</item>
+        <item>Age : 35</item>
+        <item>Age : 36</item>
+        <item>Age : 30</item>
+        <item>Age : 24</item>
+        <item>Age : 33</item>
+        <item>Age : 27</item>
+        <item>Age : 26</item>
+        <item>Age : 36</item>
+        <item>Age : 23</item>
+    </string-array>
+
+</resources>
