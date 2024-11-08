@@ -9,29 +9,29 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cs394hw.R
 import com.example.cs394hw.UserDetailActivity
-import com.example.cs394hw.model.User
+import com.example.cs394hw.model.Player
 
-class ItemAdapter(private val data: List<User>): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+class ItemAdapter(private val data: List<Player>): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
     class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view){
 
-        private lateinit var user: User
+        private lateinit var player: Player
 
         val nameView: TextView = view.findViewById(R.id.nameTV)
-        val profileView: TextView = view.findViewById(R.id.profileDescTV)
+        val profileView: TextView = view.findViewById(R.id.profileTV)
         init {
             view.setOnClickListener{
                 val context = itemView.context
                 val showUserIntent = Intent(context, UserDetailActivity::class.java)
-                showUserIntent.putExtra(UserDetailActivity.USER_NAME, user.name)
-                showUserIntent.putExtra(UserDetailActivity.USER_ADDR, user.address)
-                showUserIntent.putExtra(UserDetailActivity.USER_PROFILE, user.profileDesc)
+                showUserIntent.putExtra(UserDetailActivity.PlayerName, player.name)
+                showUserIntent.putExtra(UserDetailActivity.PlayerTeam, player.playerTeam)
+                showUserIntent.putExtra(UserDetailActivity.PlayerInfo, player.playerInfo)
                 context.startActivity(showUserIntent)
             }
         }
-        fun bind(user:User){
-            this.user = user
-            nameView.text = user.name
-            profileView.text = user.profileDesc
+        fun bind(player:Player){
+            this.player = player
+            nameView.text = player.name
+            profileView.text = player.playerInfo
         }
     }
 
@@ -47,7 +47,6 @@ class ItemAdapter(private val data: List<User>): RecyclerView.Adapter<ItemAdapte
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val user = data[position]
         holder.bind(user)
-//        holder.nameView.text = user.name
-//        holder.profileView.text = user.profileDesc
+
     }
 }

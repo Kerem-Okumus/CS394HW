@@ -2,28 +2,28 @@ package com.example.cs394hw.data
 
 import android.content.Context
 import com.example.cs394hw.R
-import com.example.cs394hw.model.User
+import com.example.cs394hw.model.Player
 
 class DataSource(val context: Context) {
-    fun getUserNamesList(): Array<String>{
+    fun getPlayerNamesList(): Array<String>{
         return context.resources.getStringArray(R.array.name_array)
     }
-    fun getUserAddressList(): Array<String>{
-        return context.resources.getStringArray(R.array.address_array)
+    fun getPlayerTeamsList(): Array<String>{
+        return context.resources.getStringArray(R.array.info_array)
     }
-    fun getUserProfileList(): Array<String>{
-        return context.resources.getStringArray(R.array.profiledesc_array)
+    fun getPlayerProfileList(): Array<String>{
+        return context.resources.getStringArray(R.array.teams_array)
     }
 
-    fun loadUsers(): List<User>{
-        val namesList = getUserNamesList()
-        val addressList = getUserAddressList()
-        val profileList  = getUserProfileList()
+    fun loadUsers(): List<Player>{
+        val namesList = getPlayerNamesList()
+        val addressList = getPlayerTeamsList()
+        val profileList  = getPlayerProfileList()
 
-        val users = mutableListOf<User>()
+        val players = mutableListOf<Player>()
         for (i in namesList.indices){
-            users.add(User(namesList[i], address = addressList[i], profileDesc = profileList[i]))
+            players.add(Player(namesList[i], playerTeam = addressList[i], playerInfo = profileList[i]))
         }
-        return users
+        return players
     }
 }

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="user"
-            type="com.example.cs394hw.model.User" />
+            type="com.example.cs394hw.model.Player" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -42,12 +42,13 @@
             app:layout_constraintTop_toBottomOf="@+id/nameView" />
 
         <TextView
-            android:id="@+id/addrView"
+            android:id="@+id/teamView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="#FDB927"
             android:text="TextView"
+            android:textSize="30sp"
             app:layout_constraintStart_toStartOf="@+id/profileView"
             app:layout_constraintTop_toBottomOf="@+id/profileView" />
     </androidx.constraintlayout.widget.ConstraintLayout>

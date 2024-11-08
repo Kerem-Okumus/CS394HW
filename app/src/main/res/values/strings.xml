@@ -12,7 +12,7 @@
         <item>Kyrie Irving</item>
         <item>Anthony Edwards</item>
     </string-array>
-    <string-array name="profiledesc_array">
+    <string-array name="teams_array">
         <item>Los Angeles Lakers</item>
         <item>Golden State Warriors</item>
         <item>Phoenix Suns</item>
@@ -28,7 +28,7 @@
 
 
     </string-array>
-    <string-array name="address_array">
+    <string-array name="info_array">
         <item>Age : 39</item>
         <item>Age : 35</item>
         <item>Age : 36</item>

@@ -10,9 +10,9 @@ import com.example.cs394hw.databinding.ActivityUserDetailBinding
 
 class UserDetailActivity : AppCompatActivity() {
     companion object{
-        const val USER_NAME = "user_name"
-        const val USER_ADDR = "user_addr"
-        const val USER_PROFILE = "user_profile"
+        const val PlayerName = "player_name"
+        const val PlayerInfo = "player_info"
+        const val PlayerTeam = "player_team"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,13 +21,13 @@ class UserDetailActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_user_detail)
         val binding: ActivityUserDetailBinding = DataBindingUtil.setContentView(this, R.layout.activity_user_detail)
 
-        val userName = intent.getStringExtra(USER_NAME)
-        val userProfile = intent.getStringExtra(USER_PROFILE)
-        val userAddress = intent.getStringExtra(USER_ADDR)
+        val playerName = intent.getStringExtra(PlayerName)
+        val playerInfo = intent.getStringExtra(PlayerTeam)
+        val playerTeam = intent.getStringExtra(PlayerInfo)
 
-        binding.nameView.text = userName
-        binding.addrView.text = userAddress
-        binding.profileView.text = userProfile
+        binding.nameView.text = playerName
+        binding.teamView.text = playerTeam
+        binding.profileView.text = playerInfo
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
